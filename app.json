@@ -1,0 +1,6 @@
+{
+  "name": "grid-heroku-2015",
+  "description": "A demo app for large-scale computing classes.",
+  "image": "heroku/java",
+  "addons": [ ]
+}
