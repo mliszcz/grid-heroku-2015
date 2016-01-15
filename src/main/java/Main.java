@@ -1,5 +1,6 @@
 import static spark.Spark.get;
 import static spark.Spark.port;
+import static spark.Spark.staticFileLocation;
 
 import java.util.Optional;
 import java.util.function.Function;
@@ -33,6 +34,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+        staticFileLocation("/public");
 
         int listenPort = Optional
                 .ofNullable(System.getenv("PORT"))

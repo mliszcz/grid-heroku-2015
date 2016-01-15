@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
+    <section>
+
+      <h1>Integrator</h1>
+
+      <form>
+        <fieldset>
+          <span>
+            <label for="inp-function">Function</label>
+            <input type="text" id="inp-function">
+          </span>
+          <span>
+            <label for="inp-from">From</label>
+            <input type="number" id="inp-from">
+          </span>
+          <span>
+            <label for="inp-to">To</label>
+            <input type="number" id="inp-to">
+          </span>
+          <span>
+            <label for="inp-steps">Steps</label>
+            <input type="number" id="inp-steps">
+          </span>
+        </fieldset>
+        <!-- <button type="submit">Submit</button> -->
+      </form>
+
+      <a href="#" id="integrator-link"></a>
+
+    </section>
+
+    <script type="text/javascript">
+      (function (window) {
+        'use strict'
+        var document = window.document
+
+        var inpFunction = document.getElementById('inp-function')
+        var inpFrom = document.getElementById('inp-from')
+        var inpTo = document.getElementById('inp-to')
+        var inpSteps = document.getElementById('inp-steps')
+
+        var link = document.getElementById('integrator-link')
+
+        var updateLink = function () {
+          console.log('onchange', inpFunction.value)
+          var uri = [
+            'integrate',
+            '?function=', window.encodeURIComponent(inpFunction.value),
+            '&from=', window.encodeURIComponent(inpFrom.value),
+            '&to=', window.encodeURIComponent(inpTo.value),
+            '&steps=', window.encodeURIComponent(inpSteps.value),
+          ].join('')
+          link.href = uri
+          link.textContent = uri
+        }
+
+        inpFunction.oninput = updateLink
+        inpFrom.oninput = updateLink
+        inpTo.oninput = updateLink
+        inpSteps.oninput = updateLink
+
+      })(window)
+    </script>
+
+  </body>
+
+</html>
