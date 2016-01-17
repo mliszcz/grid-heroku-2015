@@ -1,5 +1,23 @@
 # grid-heroku-2015
 
+
+## Server
+
+The project is bundled with embedded Jetty servlet container. It may be started
+with:
+
+```
+$ mvn exec:java
+```
+
+The server binds to the port specified in `$PORT` environment variable and
+defaults to `8080` if `$PORT` is not present.
+
+## Web GUI
+
+Simple web-based GUI for the *Integrator* service is available in the context
+root (e.g. `http://localhost:8080` in case of local deployment).
+
 ## Client
 
 Client script is stored in the `client/client.py` file.
