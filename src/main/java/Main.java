@@ -51,15 +51,17 @@ public class Main {
             String to = req.queryParams("to");
             String steps = req.queryParams("steps");
 
-//            System.out.println(String.format("Integrate %1$s over [%2$s,%3$s]",
-//                                             function,
-//                                             from,
-//                                             to));
-
             double integral = integrateRectangles(parseFunction(function),
                                                   Double.valueOf(from),
                                                   Double.valueOf(to),
                                                   Long.valueOf(steps));
+
+//            System.out.println(String.format(
+//                    "Integral of %1$s over [%2$s,%3$s] is %4$f",
+//                    function,
+//                    from,
+//                    to,
+//                    integral));
 
             res.type("application/json; charset=utf-8");
             return integral;
