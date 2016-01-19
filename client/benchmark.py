@@ -73,7 +73,7 @@ def benchmark_single_increasing_steps(client, requests = 100):
 
 def benchmark_concurrent_requests(client,
                                   requests = 100,
-                                  steps = 1000,
+                                  steps = 100,
                                   max_clients = 16):
     """testcase"""
     for clients in range(1, max_clients + 1):
@@ -85,9 +85,9 @@ def benchmark_concurrent_requests(client,
 
 
 if __name__ == '__main__':
-    # endpoint = 'http://tranquil-journey-6372.herokuapp.com'
-    endpoint = 'http://localhost:8080'
+    endpoint = 'https://tranquil-journey-6372.herokuapp.com'
+    # endpoint = 'http://localhost:8080'
     client = HerokuServiceClient(endpoint)
 
-    benchmark_concurrent_requests(client)
-    # benchmark_single_increasing_steps(client, 100)
+    # benchmark_concurrent_requests(client)
+    benchmark_single_increasing_steps(client, 100)
