@@ -297,13 +297,21 @@ Testy wydajnościowe zostały przeprowadzone w dwóch wariantach:
 
 W tym teście sprawdzaliśmy wydajność maszyny Heroku w przypadku obliczeń wykonywanych na jednym wątku. 
 Testowana była moc obliczeniowa pojedynczej maszyny, poprzez zwiększanie ilości kroków w zaimplementowanym algorytmie całkowania metodą prostokątów.
-Testy przeprowadzone zostały dla stałej liczy zapytań (requests = 100)
-Jak widać na załączonych wykresach, dla małej ilości kroków obliczenia wykonywane na Heroku zajmują znacznie więcej czasu, jednakże można zauważyć, że Heroku jest wolniejsze o pewną stała ilość czasu (okolo 30s). Te 30s to prawdopodobnie czas potrzebny na przesłanie danych i zainicializowanie maszyny. Dla dużej ilości kroków (>1000000) Heroku wypada zauważalnie lepiej.
+Testy przeprowadzone zostały dla stałej liczy zapytań (requests = 100).
+
+![alt tag](https://github.com/mliszcz/grid-heroku-2015/blob/master/results/graph1.png)
+![alt tag](https://github.com/mliszcz/grid-heroku-2015/blob/master/results/graph3.png)
+
+Jak widać na załączonych wykresach, dla małej ilości kroków obliczenia wykonywane na Heroku zajmują znacznie więcej czasu, jednakże można zauważyć, że Heroku jest wolniejsze o pewną stała ilość czasu (okolo 35s). Te 35s to prawdopodobnie czas potrzebny na przesłanie danych i zainicializowanie maszyny. Dla dużej ilości kroków (>1000000) Heroku wypada zauważalnie lepiej.
 
 ## Testy wydajnościowe w przypadku wielu wątków
 
 W teście tym sprawdzalismy jak zwiększenie ilości wykorzystywanych wątków wpłynie na wydajność obliczeniową maszyny Heroku.
 Obliczenia zostały przeprowadzone dla stałej wielkości problemu (steps = 100) oraz dla stałej liczby zapytań (requests = 100).
+
+
+![alt tag](https://github.com/mliszcz/grid-heroku-2015/blob/master/results/graph2.png)
+
 Jak widać zwiększanie ilości wykorzystywanych wątków znacząco nie wpływa na wydajność maszyny Heroku. Da się jedynie zauważyć zwiększenie odchylenia standardowego wraz, ze zwiększeniem ilości wykorzystywanch wątków.
 
 # Odnośniki
