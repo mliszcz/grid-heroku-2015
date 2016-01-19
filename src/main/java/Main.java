@@ -63,8 +63,9 @@ public class Main {
 //                    to,
 //                    integral));
 
-            res.type("application/json; charset=utf-8");
-            return integral;
+            // res.type("application/json; charset=utf-8");
+            res.type("text/plain; charset=utf-8");
+            return String.valueOf(integral);
         });
     }
 }
