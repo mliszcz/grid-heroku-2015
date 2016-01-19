@@ -189,7 +189,7 @@ prostokątów.
    https://signup.heroku.com/
    ```
 
-1. Instalujemy pakiet *Heroku Toolbelt` w wersji dla naszego systemu
+1. Instalujemy pakiet *Heroku Toolbelt* w wersji dla naszego systemu
    operacyjnego:
 
    ```
@@ -209,7 +209,7 @@ prostokątów.
    komunikat:
 
    ```
-   Creating falling-wind-1624... done, stack is cedar-14
+   Creating tranquil-journey-6372... done, stack is cedar-14
    http://tranquil-journey-6372.herokuapp.com/ | https://git.heroku.com/tranquil-journey-6372.git
    Git remote heroku added
    ```
