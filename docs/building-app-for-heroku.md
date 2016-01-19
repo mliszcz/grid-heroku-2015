@@ -302,7 +302,7 @@ Testy przeprowadzone zostały dla stałej liczy zapytań (requests = 100).
 ![alt tag](https://github.com/mliszcz/grid-heroku-2015/blob/master/results/graph1.png)
 ![alt tag](https://github.com/mliszcz/grid-heroku-2015/blob/master/results/graph3.png)
 
-Jak widać na załączonych wykresach, dla małej ilości kroków obliczenia wykonywane na Heroku zajmują znacznie więcej czasu, jednakże można zauważyć, że Heroku jest wolniejsze o pewną stała ilość czasu (okolo 30s). Te 30s to prawdopodobnie czas potrzebny na przesłanie danych i zainicializowanie maszyny. Dla dużej ilości kroków (>1000000) Heroku wypada zauważalnie lepiej.
+Jak widać na załączonych wykresach, dla małej ilości kroków obliczenia wykonywane na Heroku zajmują znacznie więcej czasu, jednakże można zauważyć, że Heroku jest wolniejsze o pewną stała ilość czasu (okolo 35s). Te 35s to prawdopodobnie czas potrzebny na przesłanie danych i zainicializowanie maszyny. Dla dużej ilości kroków (>1000000) Heroku wypada zauważalnie lepiej.
 
 ## Testy wydajnościowe w przypadku wielu wątków
 
