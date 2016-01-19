@@ -64,11 +64,10 @@ public class Main {
 //                    integral));
 
             // res.type("application/json; charset=utf-8");
-            res.type("text/plain; charset=utf-8");
+            // res.type("text/plain; charset=utf-8");
             // res.body(String.valueOf(integral));
-            res.header("Transfer-Encoding", "chunked");
+            // res.header("Transfer-Encoding", "chunked");
             return String.valueOf(integral);
-            // return res;
         });
     }
 }
