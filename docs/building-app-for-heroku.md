@@ -297,7 +297,9 @@ Testy wydajnościowe zostały przeprowadzone w dwóch wariantach:
 
 W tym teście sprawdzaliśmy wydajność maszyny Heroku w przypadku obliczeń wykonywanych na jednym wątku. 
 Testowana była moc obliczeniowa pojedynczej maszyny, poprzez zwiększanie ilości kroków w zaimplementowanym algorytmie całkowania metodą prostokątów.
-Testy przeprowadzone zostały dla stałej liczy zapytań (requests = 100)
+Testy przeprowadzone zostały dla stałej liczy zapytań (requests = 100).
+
+![alt tag](http://github.com/mliszcz/grid-heroku-2015/blob/master/results/graph1.png)
 Jak widać na załączonych wykresach, dla małej ilości kroków obliczenia wykonywane na Heroku zajmują znacznie więcej czasu, jednakże można zauważyć, że Heroku jest wolniejsze o pewną stała ilość czasu (okolo 30s). Te 30s to prawdopodobnie czas potrzebny na przesłanie danych i zainicializowanie maszyny. Dla dużej ilości kroków (>1000000) Heroku wypada zauważalnie lepiej.
 
 ## Testy wydajnościowe w przypadku wielu wątków
